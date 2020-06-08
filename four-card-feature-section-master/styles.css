@@ -3,6 +3,13 @@ body {
   background-color: hsl(0, 0%, 98%);
 }
 
+header {
+  position: relative;
+  text-align: justify;
+  margin: 1rem;
+  padding: 1rem;
+}
+
 footer {
   position: relative;
   right: 0;
@@ -16,6 +23,11 @@ h1 {
   font-size: 1.5rem;
   font-weight: 200;
   color: hsl(229, 6%, 66%);
+  margin: 0;
+}
+
+h2 {
+  margin: 0;
 }
 
 p {
@@ -26,13 +38,11 @@ p {
 
 .tileContainer {
   display: flex;
-  flex-direction: column;
+  flex-flow: column;
   padding: 0.5rem;
 }
 
 .tile {
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
   border-radius: 5px;
   box-shadow: 0 1.3px 2px rgba(0, 0, 0, 0.049),
     0 3.5px 5.5px rgba(0, 0, 0, 0.07), 0 8.4px 13.3px rgba(0, 0, 0, 0.091),
@@ -79,4 +89,76 @@ p {
 
 #calculator {
   border-top: 6px solid hsl(212, 86%, 64%);
+}
+
+@media screen and (min-width: 600px) {
+  body {
+    max-width: 100%;
+  }
+
+  .container {
+    width: 100vw;
+    margin-bottom: 0;
+    padding-top: 4rem;
+  }
+
+  header {
+    margin: 0 auto;
+    width: 500px;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  footer {
+    position: relative;
+  }
+
+  .tileContainer {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: 60px;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    margin-top: 0;
+  }
+
+  .tile {
+    width: 300px;
+    height: 200px;
+    padding-bottom: 20px;
+  }
+
+  .tile img {
+    position: relative;
+    top: 0.5%;
+  }
+
+  #supervisor {
+    grid-column-start: 2;
+    grid-row-start: 3;
+  }
+
+  #teamBuilder {
+    grid-column-start: 3;
+    grid-row-start: 1;
+  }
+
+  #karma {
+    grid-column-start: 3;
+    grid-row-start: 5;
+    grid-row-end: 9;
+  }
+
+  #calculator {
+    grid-column-start: 4;
+    grid-row-start: 3;
+  }
 }
