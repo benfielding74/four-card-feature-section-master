@@ -22,12 +22,17 @@ footer {
 h1 {
   font-size: 1.5rem;
   font-weight: 200;
-  color: hsl(229, 6%, 66%);
+  color: hsl(234, 12%, 34%);
   margin: 0;
 }
 
 h2 {
   margin: 0;
+  font-weight: 400;
+}
+
+h3 {
+  font-weight: 400;
 }
 
 p {
@@ -99,7 +104,7 @@ p {
   .container {
     width: 100vw;
     margin-bottom: 0;
-    padding-top: 4rem;
+    padding-top: 2rem;
   }
 
   header {
@@ -127,7 +132,8 @@ p {
     grid-auto-rows: 60px;
     grid-column-gap: 10px;
     grid-row-gap: 10px;
-    margin-top: 0;
+    margin-top: 1rem;
+    padding-top: 2rem;
   }
 
   .tile {
